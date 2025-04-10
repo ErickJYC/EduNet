@@ -29,17 +29,21 @@ public class Principal {
         docente.addDireccion(direcciondoc);
 
         //Administrativo
+        Direccion direccionvis = new Direccion(TipoDireccion.CASA,"San jose","Balsai","ND","Cuenca","Azuay","Ecuador");
         List<String> cargos = new ArrayList<>();
         cargos.add("Secretaria");
         cargos.add("Tesorero");
         List<String> resposabilidad = new ArrayList<>();
         resposabilidad.add("Anotar");
         resposabilidad.add("Revisar");
-        Administrativo administrativo = new Administrativo("Gabriela","Chillogalli","0515105","0978878","gaby12@gamil.com",titulos,resposabilidad);
+        Administrativo administrativo = new Administrativo("Gabriela","Chillogalli","0515105","0978878","gaby12@gamil.com",cargos,resposabilidad);
+        administrativo.addDireccion(direccionvis);
+
+
 
         //Visitante
         GregorianCalendar entrada = new GregorianCalendar(2025,4,10,9,30);
-        GregorianCalendar salida = new GregorianCalendar(2025,04,10,10,30);
+        GregorianCalendar salida = new GregorianCalendar(2025,4,10,10,30);
 
         Visitante visitante = new Visitante("Cecilia","Chimbo","050505","097878787","cecila12@gmail.com","Visita",entrada,salida);
 
