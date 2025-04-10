@@ -1,5 +1,6 @@
-package ec.edu.ups.clases;
+package Principal;
 
+import ec.edu.ups.clases.*;
 import ec.edu.ups.enums.Rol;
 import ec.edu.ups.enums.TipoDireccion;
 

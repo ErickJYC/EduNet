@@ -47,8 +47,8 @@ public class Asignacion {
     public String toString() {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         return
-                "persona=" + persona +
-                ", fechaInicio=" + dateFormat.format(fechaInicio.getTime()) +
+                super.toString() + "\npersona=" + persona +
+                ", fechaInicio=" + dateFormat.format(fechaInicio.getTime()) + //format = decuelve un metodo date//
                 ", rol=" + rol +
                 '}';
     }
