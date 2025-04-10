@@ -50,6 +50,7 @@ public class Principal {
 
         Institucion institucion1 = new Institucion("Institucion 1",1);
         institucion1.addDireccion(TipoDireccion.INSTITUCION,"calle","vieja","154","cuenca","Azuay","Ecuador");
+        institucion1.addAsignacion(asignacion1);
         List<String> sedes = new ArrayList<>();
         sedes.add("Sede1");
         sedes.add("Sede2");
@@ -58,8 +59,7 @@ public class Principal {
 
         Institucion institucion2 = new Institucion("Institucion 2",2);
         institucion2.addDireccion(TipoDireccion.TRABAJO,"loja","mexico","ND","Cuenca","Azuay","Ecuador");
-
-        //Asignacion asignacionIns = new Asignacion(new Persona("erick","yunga","055050","09787878","erick434@"),inico,Rol.DOCENTE);
+        institucion2.addAsignacion(asignacion2);
         institucion2.setSedes(sedes);
 
 
@@ -69,7 +69,6 @@ public class Principal {
         System.out.println("Mostrar Docente: " + docente);
         System.out.println("Mostrar Administrativo: " + administrativo);
         System.out.println("Mostrar Visitante: "+ visitante);
-        System.out.println("Mostrar Asignaciones 1: " + asignacion1);
-        System.out.println("Mostrar Asignaciones 2: "+ asignacion2);
+
     }
 }
