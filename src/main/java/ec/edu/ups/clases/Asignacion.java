@@ -44,7 +44,7 @@ public class Asignacion {
 
     @Override
     public String toString() {
-        return "Asignacion{" +
+        return
                 "persona=" + persona +
                 ", fechaInicio=" + fechaInicio +
                 ", rol=" + rol +

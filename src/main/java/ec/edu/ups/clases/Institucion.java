@@ -10,16 +10,16 @@ public class Institucion {
     private String nombre;
     private List<String> sedes;
     private Direccion direccion;
-    private List<Asignacion> asignacion;
+    private List<Asignacion> asignaciones;
 
     public Institucion (){
-        this.asignacion = new ArrayList<>();
+        this.asignaciones = new ArrayList<>();
         this.sedes = new ArrayList<>();
     }
     public Institucion(String nombre, int id) {
         this.nombre = nombre;
         this.id = id;
-        this.asignacion = new ArrayList<>();
+        this.asignaciones = new ArrayList<>();
         this.sedes = new ArrayList<>();
     }
     public void addDireccion(TipoDireccion tipoDireccion,String callePrincipal, String calleSecundaria, String numeracion, String ciudad, String provincia, String pais){
@@ -30,7 +30,7 @@ public class Institucion {
         this.id = id;
         this.nombre = nombre;
         this.sedes = sedes;
-        this.asignacion = asignacion;
+        this.asignaciones = asignacion;
     }
 
     public int getId() {
@@ -57,13 +57,11 @@ public class Institucion {
         this.sedes = sedes;
     }
 
-
-    public List<Asignacion> getAsignacion() {
-        return asignacion;
+    public void addAsignacion(Asignacion asignacion){
+        asignaciones.add(asignacion);
     }
-
-    public void setAsignacion(List<Asignacion> asignacion) {
-        this.asignacion = asignacion;
+    public List<Asignacion> getAsignacion(){
+        return asignaciones;
     }
 
     @Override
@@ -73,7 +71,7 @@ public class Institucion {
                 ", nombre='" + nombre + '\'' +
                 ", sedes=" + sedes +
                 ", direccion=" + direccion +
-                ", asignacion=" + asignacion +
+                ", asignacion=" + asignaciones +
                 '}';
     }
 }

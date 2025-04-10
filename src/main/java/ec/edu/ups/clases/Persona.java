@@ -5,8 +5,8 @@ import java.util.List;
 
 public class Persona {
     private String nombre;
+    private String apellido;
     private String cedula;
-    private String apllido;
     private String telefono;
     private String correoelectronico;
     private List <Direccion> direcciones;
@@ -15,10 +15,10 @@ public class Persona {
         this.direcciones = new ArrayList<>();
     }
 
-    public Persona(String nombre, String cedula, String apllido, String telefono, String correoelectronico) {
+    public Persona(String nombre, String apellido, String cedula, String telefono, String correoelectronico) {
         this.nombre = nombre;
+        this.apellido = apellido;
         this.cedula = cedula;
-        this.apllido = apllido;
         this.telefono = telefono;
         this.correoelectronico = correoelectronico;
         this.direcciones = new ArrayList<>();
@@ -41,11 +41,11 @@ public class Persona {
     }
 
     public String getApllido() {
-        return apllido;
+        return apellido;
     }
 
     public void setApllido(String apllido) {
-        this.apllido = apllido;
+        this.apellido = apllido;
     }
 
     public String getTelefono() {
@@ -72,10 +72,10 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{" +
+        return
                 "nombre='" + nombre + '\'' +
-                ", cedula='" + cedula + '\'' +
-                ", apllido='" + apllido + '\'' +
+                        ", apllido='" + apellido + '\'' +
+                        ", cedula='" + cedula + '\'' +
                 ", telefono='" + telefono + '\'' +
                 ", correoelectronico='" + correoelectronico + '\'' +
                 ", direcciones=" + direcciones +

@@ -1,5 +1,6 @@
 package ec.edu.ups.clases;
 
+import java.text.SimpleDateFormat;
 import java.util.GregorianCalendar;
 
 public class Visitante extends Persona{
@@ -9,14 +10,8 @@ public class Visitante extends Persona{
 
     public  Visitante(){}
 
-    public Visitante(String motivo, GregorianCalendar fechaDeEntrada, GregorianCalendar fechaDeSalida) {
-        this.motivo = motivo;
-        this.fechaDeEntrada = fechaDeEntrada;
-        this.fechaDeSalida = fechaDeSalida;
-    }
-
-    public Visitante(String nombre, String cedula, String apllido, String telefono, String correoelectronico, String motivo, GregorianCalendar fechaDeEntrada, GregorianCalendar fechaDeSalida) {
-        super(nombre, cedula, apllido, telefono, correoelectronico);
+    public Visitante(String nombre, String apellido, String cedula, String telefono, String correoelectronico, String motivo, GregorianCalendar fechaDeEntrada, GregorianCalendar fechaDeSalida) {
+        super(nombre, apellido, cedula, telefono, correoelectronico);
         this.motivo = motivo;
         this.fechaDeEntrada = fechaDeEntrada;
         this.fechaDeSalida = fechaDeSalida;
@@ -48,10 +43,11 @@ public class Visitante extends Persona{
 
     @Override
     public String toString() {
-        return "Visitante{" +
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy HH:mm");
+        return
+                super.toString() +
                 "motivo='" + motivo + '\'' +
-                ", fechaDeEntrada=" + fechaDeEntrada +
-                ", fechaDeSalida=" + fechaDeSalida +
-                '}';
+                ", fechaDeEntrada=" + dateFormat.format(fechaDeEntrada.getTime()) +
+                ", fechaDeSalida=" + dateFormat.format(fechaDeSalida.getTime());
     }
 }

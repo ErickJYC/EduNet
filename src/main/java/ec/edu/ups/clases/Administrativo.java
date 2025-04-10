@@ -12,8 +12,8 @@ public class Administrativo extends Persona{
          this.responsabilidades = new ArrayList<>();
      }
 
-    public Administrativo(String nombre, String cedula, String apllido, String telefono, String correoelectronico) {
-        super(nombre, cedula, apllido, telefono, correoelectronico);
+    public Administrativo(String nombre, String apellido, String cedula, String telefono, String correoelectronico,List<String> cargos,List<String> responsabilidades) {
+        super(nombre, apellido, cedula, telefono, correoelectronico);
         this.cargos = new ArrayList<>();
         this.responsabilidades = new ArrayList<>();
     }
@@ -36,9 +36,9 @@ public class Administrativo extends Persona{
 
     @Override
     public String toString() {
-        return "Administrativo{" +
+        return
+                super.toString() +
                 "cargos=" + cargos +
-                ", responsabilidades=" + responsabilidades +
-                '}';
+                ", responsabilidades=" + responsabilidades ;
     }
 }

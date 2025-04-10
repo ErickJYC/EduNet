@@ -5,12 +5,8 @@ public class Estudiante extends Persona{
 
     public Estudiante(){}
 
-    public Estudiante(String carrera) {
-        this.carrera = carrera;
-    }
-
-    public Estudiante(String nombre, String cedula, String apllido, String telefono, String correoelectronico, String carrera) {
-        super(nombre, cedula, apllido, telefono, correoelectronico);
+    public Estudiante(String nombre, String apellido, String cedula, String telefono, String correoelectronico, String carrera) {
+        super(nombre, apellido, cedula, telefono, correoelectronico);
         this.carrera = carrera;
     }
 
@@ -24,8 +20,8 @@ public class Estudiante extends Persona{
 
     @Override
     public String toString() {
-        return "Estudiante{" +
-                "carrera='" + carrera + '\'' +
-                '}';
+        return
+                super.toString()+
+                "carrera='" + carrera + '\'';
     }
 }
