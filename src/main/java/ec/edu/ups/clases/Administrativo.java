@@ -14,8 +14,8 @@ public class Administrativo extends Persona{
 
     public Administrativo(String nombre, String apellido, String cedula, String telefono, String correoelectronico,List<String> cargos,List<String> responsabilidades) {
         super(nombre, apellido, cedula, telefono, correoelectronico);
-        this.cargos = new ArrayList<>();
-        this.responsabilidades = new ArrayList<>();
+        this.responsabilidades = responsabilidades;
+        this.cargos = cargos;
     }
 
     public List<String> getCargos() {
